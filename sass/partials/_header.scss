@@ -1,0 +1,147 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Header
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.header {
+	padding: 50px 30px;
+	background: url(../img/cod.jpg) no-repeat center center;
+	@include background-size(cover !important);
+	h1, h3 {
+		display: inline-block;
+		margin: 0;
+		padding: 5px 10px;
+		line-height: 1em;
+		color: $white;
+		@include rgba-background($black, 0.8);
+	}
+}
+
+#main-nav {
+	background: transparent;
+	height: 40px;
+	.top-bar-section {
+		.has-dropdown > a:after {
+			top: 20px;
+			border-top-color: $black;
+		}
+
+		// First level Elements, aka main link text
+		> ul {
+			height: 40px !important;
+			background: transparent;
+			> li {
+				&:hover > a,
+				&.active > a {
+					background: $grey !important;
+				}
+				&:last-of-type > a {
+					padding: 0 48px 0 48px;
+				}
+				> a {
+					font-family: ProximaNovaSBold, arial, sans-serif;
+					font-size: 1.2em;
+					padding: 0 45px 0 45px;
+					font-weight: bold;
+					color: $black;
+					line-height: 40px !important;
+					background: $white !important;
+					border-bottom: 1px solid $black;
+					&:hover {
+						color: $black;
+						background: $grey !important;
+					}
+				}
+				&.has-dropdown {
+					&.programs:hover > ul {
+						left: -350px;
+					}
+					&:hover > a {
+						border-bottom-color: $grey;
+					}
+					> a {
+						&:hover {
+							border-bottom-color: $grey;
+						}
+					}
+				}
+
+				// All non-programs styling
+				&.has-dropdown > ul {
+					background: $grey;
+					> li {
+						width: 100%;
+						float: left;
+						a {
+							background: $grey !important;
+							font-weight: bold;
+							color: $black;
+							font-size: 1em;
+							&:hover {
+								color: $lighten-20;
+							}
+						}
+					}
+				}
+
+				// Second level Elements, aka Headers
+				&.has-dropdown.programs > ul {
+					width: 820px;
+					background: $grey;
+					padding: 20px;
+					> li {
+						width: auto;
+						float: left;
+						&:last-of-type {
+							a {
+								padding-right: 0;
+							}
+						}
+						a {
+							background: $grey !important;
+							font-weight: bold;
+							color: $black;
+							font-size: 1em;
+							padding: 0 50px 0 0;
+							line-height: 2em;
+						}
+
+						// Third level Elements
+						> ul {
+							> li {
+								float: left;
+								margin-left: 15px;
+								width: auto;
+								display: block;
+								clear: both;
+								a {
+									position: relative;
+									background: $grey !important;
+									padding-left: 10px;
+									font-weight: normal;
+									font-size: 0.8em;
+									color: $black;
+									line-height: 2em;
+									&:before {
+										@extend .fa-base;
+										content: '';
+										top: 50%;
+										left: 0;
+										margin-top: -1em;
+										font-size: 0.8em;
+										line-height: 2em;
+										color: $black;
+									}
+									&:hover {
+										color: $lighten-20;
+										&:before {
+											color: $lighten-20;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,277 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Home
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.mfp-figure {
+	&:after {
+		background: #cccccc !important;
+		@include box-shadow(0);
+	}
+	figure {
+		margin: 1em;		
+	}
+}
+.content-sliders-container {
+	margin-bottom: 50px;
+	.heading-block {
+		margin-bottom: 20px;
+		border-bottom: 1px solid $black;
+		@include clearfix;
+		h3 {
+			float: left;
+			margin: 0;
+			text-transform: uppercase;
+			line-height: 1.5em;
+		}
+		a {
+			position: relative;
+			margin-top: 12px;
+			padding-right: 20px;
+			float: right;
+			color: $black;
+			&:after {
+				@extend .fa-base;
+				content: '';
+				top: 0;
+				right: 0;
+				width: 15px;
+				height: 15px;
+				padding-top: 1px;
+				padding-left: 6px;
+				font-size: 0.9em;
+				color: $white;
+				background: $black;
+				@include border-radius(10px);
+			}
+			&:hover {
+				color: $lighten-20;
+				&:after {
+					background: $lighten-20;
+				}
+			}
+		}
+	}
+	.content-slider {
+		h5 {
+			margin-top: 0;
+			line-height: 1em;
+			a {
+				color: $black;
+				&:hover {
+					color: $lighten-20;
+				}
+			}
+		}
+		.details {
+			font-size: 0.8em;
+			line-height: 1.5em;
+			margin: 10px 0;
+			span {
+				position: relative;
+				display: block;
+				padding-left: 18px;
+				&:before {
+					@extend .fa-base;
+					top: 0;
+					left: 0;
+					font-size: 0.9em;
+					color: $black;
+				}
+				&.date:before {
+					content: '';
+				}
+				&.time:before {
+					content: '';
+					left: 1px;
+				}
+				&.location:before {
+					content: '';
+					left: 3px;
+				}
+			}
+		}
+		p {
+			font-size: 0.8em;
+			line-height: 1.2em;
+			margin-bottom: 0;
+		}
+	}
+
+	.orbit-prev,
+	.orbit-next {
+		top: auto;
+		bottom: 0;
+		color: $black;
+		height: 40px;
+		width: 40px;
+		background: $white;
+		border: 1px solid $black;
+		&:hover {
+			background: $black;
+			span:after {
+				color: $white;
+			}
+		}
+		span {
+			position: relative;
+			border-color: transparent !important;
+			text-indent: 0 !important;
+			line-height: 0;
+			margin: 0;
+			left: 50%;
+			border: none;
+			&:after {
+				@extend .fa-base;
+				top: 0;
+				left: 0;
+				font-size: 40px;
+				color: $black;
+			}
+		}
+	}
+	.orbit-prev {
+		left: 15px;
+		span {
+			&:after {
+				content: '';
+				margin-left: -9px;
+			}
+		}
+	}
+	.orbit-next {
+		left: 54px;
+		span {
+			&:after {
+				content: '';
+				margin-left: -5px;
+			}
+		}
+	}
+
+	.orbit-slide-number,
+	.orbit-timer,
+	.orbit-bullets-container {
+		display: none;
+	}
+
+	.orbit-container {
+		padding-bottom: 50px;
+	}
+}
+
+.student-work-container {
+	margin-bottom: 50px;
+	.heading-block {
+		margin-bottom: 20px;
+		border-bottom: 1px solid $black;
+		@include clearfix;
+		h3 {
+			float: left;
+			margin: 0;
+			text-transform: uppercase;
+			line-height: 1.5em;
+		}
+		a {
+			position: relative;
+			margin-top: 12px;
+			padding-right: 20px;
+			float: right;
+			color: $black;
+			&:after {
+				@extend .fa-base;
+				content: '';
+				top: 0;
+				right: 0;
+				width: 15px;
+				height: 15px;
+				padding-top: 1px;
+				padding-left: 6px;
+				font-size: 0.9em;
+				color: $white;
+				background: $black;
+				@include border-radius(10px);
+			}
+			&:hover {
+				color: $lighten-20;
+				&:after {
+					background: $lighten-20;
+				}
+			}
+		}
+	}
+	.student-work {
+		li {
+			a {
+				padding-right: 20px;
+				&:nth-child(4n) {
+					padding-right: 0;
+				}
+				img {
+					display: inline-block;
+					// width: 24.6%;
+					width: 23.1%;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+	.orbit-prev,
+	.orbit-next {
+		top: auto;
+		bottom: 0;
+		color: $black;
+		height: 40px;
+		width: 40px;
+		background: $white;
+		border: 1px solid $black;
+		&:hover {
+			background: $black;
+			span:after {
+				color: $white;
+			}
+		}
+		span {
+			position: relative;
+			border-color: transparent !important;
+			text-indent: 0 !important;
+			line-height: 0;
+			margin: 0;
+			left: 50%;
+			border: none;
+			&:after {
+				@extend .fa-base;
+				top: 0;
+				left: 0;
+				font-size: 40px;
+				color: $black;
+			}
+		}
+	}
+	.orbit-prev {
+		left: 0;
+		span {
+			&:after {
+				content: '';
+				margin-left: -9px;
+			}
+		}
+	}
+	.orbit-next {
+		left: 39px;
+		span {
+			&:after {
+				content: '';
+				margin-left: -5px;
+			}
+		}
+	}
+
+	.orbit-slide-number,
+	.orbit-timer,
+	.orbit-bullets-container {
+		display: none;
+	}
+
+	.orbit-container {
+		padding-bottom: 50px;
+	}
+}

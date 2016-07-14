@@ -1,0 +1,83 @@
+@import "normalize";
+@import "foundation/settings";
+@import "foundation";
+@import "mixins";
+@import "colors";
+@import "fonts";
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Global
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+html, body {
+	background: $white;
+	font-family: ProximaNovaReg, arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	// font-family: ProximaNovaThin, arial, sans-serif;
+	font-family: ProximaNovaSBold, arial, sans-serif;
+	color: $black;
+}
+
+.fa-base {
+	font-family: FontAwesome;
+	display: block;
+	position: absolute;
+}
+
+$lighten-20: lighten($black, 20%) !default;
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Top-bar
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+#top-bar {
+	height: 30px;
+	line-height: 30px;
+	background: $black;
+	input {
+		position: relative;
+		top: 2px;
+		padding: 4px 22px 4px 10px;
+		font-size: 0.8em;
+	}
+	span:after {
+		@extend .fa-base;
+		content: '\f002';
+		top: 2px;
+		right: 20px;
+		font-size: 1em;
+		color: $black;		
+	}
+	.top-bar-section {
+		.has-dropdown > a:after {
+			top: 15px;
+		}
+		ul {
+			height: 30px !important;
+			background: $black;
+			.divider,
+			[role="separator"] {
+				height: 30px;
+			}
+			li a {
+				line-height: 30px !important;
+				background: $black !important;
+				&:hover {
+					background: $lighten-20 !important;
+				}
+			}
+		}
+	}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+* Partials
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+@import "partials/header";
+@import "partials/home";
+@import "partials/accordion";
+@import "partials/interior";
+@import "partials/single";
+@import "partials/footer";
+
+
